@@ -6,7 +6,7 @@ function App() {
 
   return (
     <div className="container">
-      react
+      React Study
     </div>
   )
 }
