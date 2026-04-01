@@ -1,0 +1,75 @@
+
+/* h3{margin-top: 30px;}
+h3 span{font-weight: 400;font-size: 14px;} */
+
+.todoListContainer{}
+
+.todoInput{
+  display: flex;
+  gap: 12px;
+  height: 40px;
+}
+.todoInput input{
+  flex: 1;
+  padding-left: 12px;
+  padding-right: 12px;
+  border: 1px solid #bdc3c7;
+  border-radius: 8px;
+  font-size: 16px;
+}
+.todoInput button{
+  background-color: #2ecc71;
+  color:#fff;
+  border: 0 none;
+  border-radius: 8px;
+  padding: 0 20px;
+  cursor: pointer;
+}
+
+.TodoListItems{
+  margin-top: 12px;
+}
+.TodoListItems ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.TodoListItems li{
+  margin-bottom: 12px;
+  padding: 12px 20px;
+  border: 1px solid #bdc3c7;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+}
+.TodoListItems li span{
+  flex: 1;
+}
+.TodoListItems li span.completed{
+  text-decoration: line-through;
+  color:#7f8c8d;
+}
+.TodoListItems input{
+  margin-right: 12px;
+  width: 20px;
+  height: 20px;
+}
+.TodoListItems button{
+  background-color: #e74c3c;
+  color: #fff;
+  border :0 none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.TodoProgress{
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.TodoProgress progress{
+  flex: 1;
+  height: 40px;
+}

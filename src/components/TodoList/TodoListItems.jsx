@@ -1,0 +1,33 @@
+import styles from "./TodoList.module.css";
+
+const TodoListItems = ({ todos, onToggle, onDelete }) => {
+    return (
+        <div className={styles.TodoListItems}>
+            <h3>할 일 목록</h3>
+            {todos.length === 0 ? (<div>할 일 목록이 없습니다.</div>
+            ) : (
+            <ul>
+                {todos.map((todo, index) => {
+                    return (
+                      <li key={index}>
+                          <input type="checkbox" 
+                                 checked={todo.isCompleted}
+                                 onChange={() =>{
+                                    onToggle(todo.id);
+                                 }} 
+                           />
+                          <span className={todo.isCompleted ? "completed" : ""}>{todo.text}</span>
+                          <button onClick={() => {
+                                    onDelete(todo.id);  // 할 일을 삭제
+                                  }}
+                          >삭제</button>
+                      </li>
+                    );
+                })}
+            </ul>
+            )}
+        </div>
+    )
+}
+
+export default TodoListItems;
