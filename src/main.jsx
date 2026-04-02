@@ -3,12 +3,16 @@ import { BrowserRouter } from 'react-router-dom';
 import './index.css'
 import App from './App.jsx'
 
-// Vercel 환경(process.env.VERCEL)일 때는 basename을 없애고, 아니면 gh-pages용 경로 사용
-const basename = import.meta.env.MODE === 'gh-pages' ? '/react-study' : '';
+
+// 현재 빌드 모드가 'gh-pages'인지 확인하는 변수입니다.
+const isGitHubPages = import.meta.env.MODE === 'gh-pages';
+
+// GitHub Pages일 때는 '/react-study'를, 그 외(Vercel 등)에는 빈 값을 사용합니다.
+const baseName = isGitHubPages ? '/react-study' : '';
 
 createRoot(document.getElementById('root')).render(
     
-    <BrowserRouter basename={basename}>
+    <BrowserRouter basename={baseName}>
         <App />
     </BrowserRouter>
 )
