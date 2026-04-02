@@ -16,20 +16,18 @@ const ProductDetail = () => {
     }
 
     return (
-        <div>
-            <div className={styles.productContainer}>
+        <>
+            <div className={styles.productDetail}>
                 <img src={product.image} />
                 <div className={styles.productInfo}>
                     <div className={styles.productCategory}>{product.category}</div>
-                    <h2 className={styles.productName}>{product.name}</h2>
+                    <h3 className={styles.productName}>{product.name}</h3>
                     <div className={styles.productPrice}>{product.price.toLocaleString()}원</div>
                     <button>구매하기</button>
                 </div>
             </div>
-            <hr />
             <p className={styles.productDesc}>{product.description}</p>
             <h3>리뷰({product.reviews.length})</h3>
-            <hr />
             {product.reviews.length > 0 ? (
                 product.reviews.map((review) => {
                 return (
@@ -44,7 +42,7 @@ const ProductDetail = () => {
                     </div>
                 );
             })) : <div className={styles.emptyReview}>작성된 리뷰가 없습니다.</div>}
-        </div>
+        </>
     )
 }
 

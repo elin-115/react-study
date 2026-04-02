@@ -22,7 +22,7 @@ const Ecommerce = () => {
     }
 
     return (
-        <>
+        <div className={styles.ecommerceContainer}>
             <ul className={styles.categryList}>
                 {["전체", "상의", "하의", "신발", "가방", "악세서리",].map(
                   (categry) => {
@@ -52,7 +52,7 @@ const Ecommerce = () => {
                     })
                 };
             </div>
-        </>
+        </div>
     );
 }
 

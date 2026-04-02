@@ -1,3 +1,5 @@
+.ecommerceContainer{}
+
 .categryList{list-style:none;padding:0;display:flex;gap:8px;font-size:18px;}
 .categryList li{color:#95a5a6;cursor:pointer;}
 .categryList li.selected{font-weight:bold;color:#000;}
@@ -5,19 +7,19 @@
 .productList{display:flex;flex-wrap:wrap;gap:5px;}
 .productListItem{overflow:hidden;width:200px;margin-bottom:20px;border:1px solid #bdc3c7;border-radius:4px;}
 .productListItem img{display:block;height:200px;}
-.productInfo{padding:12px;}
-.productCategory{font-size:12px;color:#7f8c8d;}
-.productName{margin-top:8px;}
-.productPrice{margin-top:8px;font-weight:bold;}
+.productListItem .productInfo{display:block;width:100%;padding:12px;box-sizing:border-box;}
+.productListItem .productInfo .productCategory{font-size:12px;color:#7f8c8d;}
+.productListItem .productInfo .productName{display:block;margin-top:8px;font-size:14px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+.productListItem .productInfo .productPrice{margin-top:8px;font-weight:bold;}
 
-.productContainer{display:flex;}
-.productContainer button{margin-top:auto;padding:12px 20px;border:0 none;border-radius:8px;background-color:#34495e;color:#fff;cursor:pointer;}
-.productContainer img{width:250px;height:250px;border-radius:8px;}
-.productInfo{display:flex;flex-direction:column;width:400px;margin-left:auto;}
-
-.productCategory{font-size:16px;color: #7f8c8d;}
-.productPrice{font-weight:bold;font-size:20px;}
-.productDesc{padding:20px;font-size:18px;line-height:30px;color:gray;}
+.productDetail{display:flex;padding-bottom:20px;margin-bottom:20px;border-bottom:1px solid #858585;}
+.productDetail button{width:100px;margin-top:auto;padding:0 20px;border:0 none;border-radius:8px;background-color:#34495e;color:#fff;cursor:pointer;}
+.productDetail img{width:250px;height:250px;border-radius:8px;}
+.productDetail .productInfo{display:flex;flex-direction:column;width:400px;margin-left:12px;box-sizing:border-box;}
+.productDetail .productCategory{font-size:16px;color:#7f8c8d;}
+.productDetail .productPrice{font-weight:bold;font-size:20px;}
+.productDesc{margin-bottom:40px;padding:10px;font-size:18px;line-height:30px;color:#858585;}
+.productDesc+h3{margin-bottom:0;padding-bottom:16px;border-bottom:1px solid #858585}
 
 .reviewItem{padding:12px;border-bottom:1px solid #95a5a6;}
 .reviewItem .text{margin-top:8px;}

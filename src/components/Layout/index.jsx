@@ -2,7 +2,7 @@ import { Outlet, NavLink, useLocation } from "react-router-dom";
 import styles from "./Layout.module.css";
 
 const Layout = () => {
-    const activeClass = ({ isActive }) => (isActive ? "on" : "");
+    const activeClass = ({ isActive }) => (isActive ? styles.on : "");
     const location = useLocation(); // 현재 URL 정보
 
     const pageTitles = {            // 경로별 text 정의
@@ -25,7 +25,7 @@ const Layout = () => {
     }
 
     // 3. 둘 다 해당 안되면 기본값인 "React Study" 사용
-    const finalTitle = currentTitle || "React Study";
+    const finalTitle = currentTitle || "";
 
     
 

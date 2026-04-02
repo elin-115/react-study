@@ -16,7 +16,7 @@ const TodoListItems = ({ todos, onToggle, onDelete }) => {
                                     onToggle(todo.id);
                                  }} 
                            />
-                          <span className={todo.isCompleted ? "completed" : ""}>{todo.text}</span>
+                          <span className={todo.isCompleted ? styles.completed : ""}>{todo.text}</span>
                           <button onClick={() => {
                                     onDelete(todo.id);  // 할 일을 삭제
                                   }}

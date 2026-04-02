@@ -8,6 +8,7 @@ import Timer from "./components/Timer";
 import Blog from "./components/Blog";
 import Ecommerce from "./components/Ecommerce";
 import ProductDetail from "./components/Ecommerce/ProductDetail";
+import NotFound from "./components/NotFound";
 import './App.css';
 
 function App() {
@@ -29,6 +30,8 @@ function App() {
           
           {/* 2. 상품 상세 페이지 추가 (파라미터 :id 가 핵심!) */}
           <Route path="products/:productId" element={<ProductDetail />} />
+
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
     </>

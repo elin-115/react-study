@@ -1,1 +1,5 @@
-.container{display:flex;height:300px;font-weight:bold;font-size:30px;align-items:center;justify-content:center;text-align:center;color:#616161;}
+.NotFoundContainer{
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    min-height:300px;height:calc(100vh - 300px);font-weight:bold;font-size:30px;text-align:center;color:#616161;}
+.NotFoundContainer h3{font-size:60px;}
+.NotFoundContainer img{width:300px;}
