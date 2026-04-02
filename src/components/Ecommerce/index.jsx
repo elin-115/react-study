@@ -23,6 +23,7 @@ const Ecommerce = () => {
 
     return (
         <div className={styles.ecommerceContainer}>
+            <h3><Link to="/ecommerce">멋사몰</Link></h3>
             <ul className={styles.categryList}>
                 {["전체", "상의", "하의", "신발", "가방", "악세서리",].map(
                   (categry) => {
@@ -35,7 +36,7 @@ const Ecommerce = () => {
                   }
                 )}
             </ul>
-            <h3>상품 목록({filteredProducts.length})</h3>
+            <h4>상품 목록({filteredProducts.length})</h4>
             <div className={styles.productList}>
                 {filteredProducts.map(({ id, category, image, name, price }) => {
                         console.log(products);

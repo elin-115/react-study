@@ -7,7 +7,7 @@ const CounterController = () => {
     const [histories, setHistories] = useState([]);
 
     return (
-        <div className="cont_wrap">
+        <div className={styles.counterContainer}>
             <div className={styles.value}>{count}</div>
             <div className={styles.controllBox}>
                 <div className={styles.controller}>

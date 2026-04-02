@@ -10,7 +10,7 @@ const Layout = () => {
         "/counter": "Counter",
         "/tracker": "Mouse Tracker",
         "/todo": "TODO LIST",
-        "/timer": "Timer-app",
+        "/timer": "Timer",
         "/blog": "Blog",
         "/ecommerce": "Ecommerce",
         "/products": "Product-Detail"
@@ -37,7 +37,7 @@ const Layout = () => {
                     <li><NavLink to="/counter" className={activeClass}>Counter</NavLink></li>
                     <li><NavLink to="/tracker" className={activeClass}>Mouse Tracker</NavLink></li>
                     <li><NavLink to="/todo" className={activeClass}>Todo List</NavLink></li>
-                    <li><NavLink to="/timer" className={activeClass}>Timer-app</NavLink></li>
+                    <li><NavLink to="/timer" className={activeClass}>Timer</NavLink></li>
                     <li><NavLink to="/blog" className={activeClass}>Blog</NavLink></li>
                     <li><NavLink to="/ecommerce" className={activeClass}>Ecommerce</NavLink></li>
                 </ul>
