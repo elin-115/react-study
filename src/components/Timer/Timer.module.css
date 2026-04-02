@@ -1,0 +1,12 @@
+.timerAppContainer{width:300px;margin:0 auto;}
+
+.timerDisplay{margin-bottom:30px;padding:40px 0 50px;border:1px solid #adadad;border-radius:8px;text-align:center;}
+.timerDisplay span{display:inline-block;vertical-align:top;}
+.timerDisplay .value{font-size:80px;line-height:116px;font-weight:bold;}
+.timerDisplay .unit{margin-left:12px;padding-top:50px;font-size:20px;line-height:66px;}
+
+.timerButton{display:flex;justify-content:center;}
+.timerButton button{width:104px;font-size:20px;font-weight:bold;border:0 none;border-radius:8px;cursor:pointer;}
+.timerButton button.startButton{background-color:#2ecc71;color:#fff;}
+.timerButton button.againButton{background-color:#ff640a;color:#fff;}
+.timerButton button.stopButton{background-color:#616161;color:#fff;}

@@ -5,7 +5,7 @@ ul{list-style:none;}
 
 input{display:inline-block;width:200px;height:36px;border:1px solid #cecbcb;color:#444;vertical-align:top;box-sizing:border-box;}
 input:focus{border:1px solid #c3c7ff;}
-button{display:inline-block;width:60px;height:36px;border:1px solid #cecbcb;color:#444;vertical-align:top}
+button{display:inline-block;width:60px;height:36px;line-height:36px;border:1px solid #cecbcb;color:#444;vertical-align:top}
 
 .cont_wrap{}
 .flexBox{display:flex;gap:20px;}
