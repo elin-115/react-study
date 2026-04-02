@@ -2,10 +2,10 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
-export default defineConfig({
-  plugins: [react()],
-  // Vercel 배포 시에는 "/", GitHub Pages 배포 시에는 "/react-study/" 적용
-  base: process.env.NODE_ENV === 'production' && !process.env.VERCEL 
-    ? '/react-study/' 
-    : '/',
-})
+export default defineConfig(({ mode }) => {
+  return {
+    plugins: [react()],
+    // gh-pages 모드일 때만 경로 지정, 그 외(Vercel 등)는 '/' 사용
+    base: mode === 'gh-pages' ? '/react-study/' : '/',
+  };
+});
