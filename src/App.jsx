@@ -7,6 +7,7 @@ import TodoList from "./components/TodoList";
 import Timer from "./components/Timer";
 import Blog from "./components/Blog";
 import Ecommerce from "./components/Ecommerce";
+import ProductDetail from "./components/Ecommerce/ProductDetail";
 import './App.css';
 
 function App() {
@@ -22,7 +23,12 @@ function App() {
           <Route path="todo" element={<TodoList />} />
           <Route path="timer" element={<Timer />} />
           <Route path="blog" element={<Blog />} />
+
+          {/* 1. 상품 목록 페이지 */}
           <Route path="ecommerce" element={<Ecommerce />} />
+          
+          {/* 2. 상품 상세 페이지 추가 (파라미터 :id 가 핵심!) */}
+          <Route path="products/:productId" element={<ProductDetail />} />
         </Route>
       </Routes>
     </>

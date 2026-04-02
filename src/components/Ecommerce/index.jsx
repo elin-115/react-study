@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { Link } from "react-router-dom"
-import styles from "./Home.module.css";
+import { Link } from "react-router"
+import styles from "./Ecommerce.module.css";
 import useFetchProducts from "../../hooks/useFetchProducts";
 
-const Home = () => {
+const Ecommerce = () => {
     const { products, isProductsLoading, isProductsError } = useFetchProducts();
     const [selectedCategory, setSelectedCategory] = useState("전체");
 
@@ -56,4 +56,4 @@ const Home = () => {
     );
 }
 
-export default Home;
+export default Ecommerce;

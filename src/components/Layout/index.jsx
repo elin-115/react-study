@@ -4,6 +4,7 @@ import styles from "./Layout.module.css";
 const Layout = () => {
     const activeClass = ({ isActive }) => (isActive ? "on" : "");
     const location = useLocation(); // 현재 URL 정보
+
     const pageTitles = {            // 경로별 text 정의
         "/": "HOME",
         "/counter": "Counter",
@@ -11,10 +12,22 @@ const Layout = () => {
         "/todo": "TODO LIST",
         "/timer": "Timer-app",
         "/blog": "Blog",
-        "/ecommerce": "Ecommerce"
+        "/ecommerce": "Ecommerce",
+        "/products": "Product-Detail"
     };
-    // 현재 경로(location.pathname)에 맞는 제목을 찾기
-    const currentTitle = pageTitles[location.pathname] || "React Study";
+
+    // 1. 객체에서 정확히 일치하는 제목이 있는지 찾기
+    let currentTitle = pageTitles[location.pathname];
+
+    // 2. if 일치하는게 없고, 경로가 '/products'로 시작한다면 'Product-Detail'을 할당
+    if (!currentTitle && location.pathname.startsWith("/products")) {
+        currentTitle = "Product-Detail";
+    }
+
+    // 3. 둘 다 해당 안되면 기본값인 "React Study" 사용
+    const finalTitle = currentTitle || "React Study";
+
+    
 
     return (
         <div className={styles.wrap_container}>
@@ -30,7 +43,7 @@ const Layout = () => {
                 </ul>
             </header>
             <main className={styles.area_body}>
-                <h2>{currentTitle}</h2>
+                <h2>{finalTitle}</h2>
                 <Outlet />
             </main>
         </div>
