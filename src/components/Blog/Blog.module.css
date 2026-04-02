@@ -1,0 +1,7 @@
+.blogContainer{}
+.postItem{margin-bottom:12px;padding:12px;border:1px solid #dbc3c7;border-radius:8px;}
+.postItem strong{display:block;margin-bottom:12px;font-size:16px;}
+.postItem p{margin-bottom:12px;font-size:14px;color:#7f8c8d;}
+.userInfo{display:flex;gap:8px;align-items:center;}
+.userInfo .avatar{width:30px;height:30px;line-height:30px;background-color:#9b59b6;border-radius:50%;color:#fff;display:flex;justify-content:center;align-items:center;}
+.userInfo .email{margin-left:auto;color:#7f8c8d;font-size:14px;}
